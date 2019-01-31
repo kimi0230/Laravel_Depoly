@@ -64,7 +64,7 @@ mysql:
 
 data:
 	#sudo mysqladmin -f drop $(DB)
-	sudo mysqladmin create $(DB) --default-character-set=utf8 >> /dev/null 2>&1
+	sudo mysqladmin -u root -p create $(DB)  --default-character-set=utf8 >> /dev/null 2>&1
 
 ssh:
 	sudo mkdir -p /root/.ssh
